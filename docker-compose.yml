@@ -1,9 +1,12 @@
 version: "3.7"
 
 services:
-  web:
+  postwoman:
     build:
       context: .
+    image: postwoman
+    container_name: postwoman
+    restart: always
     volumes:
       - "./.postwoman:/app/.postwoman"
       - "./assets:/app/assets"
